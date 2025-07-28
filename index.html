@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carolina Vargas | Strategic Communicator</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8; /* Khaki Beige */
+        }
+        .section-title {
+            font-weight: 800;
+            font-size: 2.25rem; /* 36px */
+            letter-spacing: -0.025em;
+        }
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .card-content {
+            flex-grow: 1;
+        }
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+        .modal-content {
+             transition: transform 0.3s ease;
+        }
+        .hero-background {
+            position: relative;
+            background-image: url('img/hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(253, 251, 248, 0.85); /* Khaki Beige overlay */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body class="text-stone-800">
+
+    <!-- Header / Navigation -->
+    <header class="bg-orange-50/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-stone-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold tracking-tight text-black">Carolina Vargas</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-stone-600 hover:text-slate-700 transition-colors">About</a>
+                <a href="#work" class="text-stone-600 hover:text-slate-700 transition-colors">Work</a>
+                <a href="#podcasts" class="text-stone-600 hover:text-slate-700 transition-colors">Podcasts</a>
+                <a href="#contact" class="text-stone-600 hover:text-slate-700 transition-colors">Contact</a>
+            </nav>
+            <a href="#contact" class="hidden md:block bg-slate-700 text-white px-4 py-2 rounded-lg hover:bg-slate-800 transition-colors">
+                Get in Touch
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section id="home" class="hero-background pt-32 pb-20 md:pt-48 md:pb-32">
+            <div class="container mx-auto px-6 text-center hero-content">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tighter text-black">
+                    Strategic Communicator.
+                    <br>
+                    <span class="text-slate-700">Authentic Storyteller.</span>
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-stone-800 font-medium">
+                    I build bridges between complex ideas and diverse audiences through clear, compelling, and brand-driven content.
+                </p>
+                <div class="mt-8 flex justify-center space-x-4">
+                    <a href="#work" class="bg-black text-white px-6 py-3 rounded-lg hover:bg-stone-800 transition-colors text-lg shadow-md">
+                        View My Work
+                    </a>
+                    <a href="https://www.linkedin.com/in/carolina-j-vargas/" target="_blank" class="bg-white text-stone-800 px-6 py-3 rounded-lg hover:bg-stone-100 transition-colors text-lg shadow-md">
+                        LinkedIn &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: About Me -->
+        <section id="about" class="py-20 md:py-32" style="background-color: #F0EBE3;">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-5 gap-12 items-center">
+                    <div class="md:col-span-2">
+                        <img src="img/profile.jpg" 
+                             alt="Carolina Vargas professional headshot" 
+                             class="rounded-lg shadow-lg w-full h-full object-cover">
+                    </div>
+                    <div class="md:col-span-3">
+                        <h2 class="section-title mb-4 text-black">Hi, I'm Carolina.</h2>
+                        <p class="text-lg text-stone-600 leading-relaxed mb-4">
+                            I am a communications professional with over ten years of experience and a passion for turning complex policy, legal, and community topics into accessible and engaging content. With a background in journalism and digital strategy, I excel at managing the full content lifecycle: from initial concept and reporting to publication, promotion, and analytics.
+                        </p>
+                        <p class="text-lg text-stone-600 leading-relaxed">
+                            My experience spans from leading communications for federal government programs to building a local media platform from scratch. I thrive on creating audience-first strategies that build trust, drive engagement, and deliver measurable results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Work Experience -->
+        <section id="work" class="py-20 md:py-32" style="background-color: #FDFBF8;">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-black">My Experience</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">
+                        A selection of roles where I've made an impact.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Work Item 1 (with Modal) -->
+                    <div class="card bg-white p-8 rounded-lg border border-stone-200">
+                        <div class="card-content flex flex-col">
+                            <div class="flex-grow">
+                                <h3 class="text-xl font-bold mb-2 text-black">Founder & Editor</h3>
+                                <p class="text-slate-700 font-semibold mb-4">The Herndon Herald</p>
+                                <p class="text-stone-600">
+                                    Launched and scaled a local content platform, where I directed editorial strategy, brand identity, and cross-channel promotion. My role included managing the publication's social media presence to grow its audience and developing its initial advertising and monetization strategies.
+                                </p>
+                            </div>
+                            <div class="mt-4">
+                                <button data-modal-target="herndonHeraldModal" class="open-modal-btn text-slate-700 hover:text-slate-800 font-semibold inline-block">
+                                    View Article Samples &rarr;
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Work Item 2 (with Modal) -->
+                    <div class="card bg-white p-8 rounded-lg border border-stone-200">
+                        <div class="card-content flex flex-col">
+                            <div class="flex-grow">
+                                <h3 class="text-xl font-bold mb-2 text-black">Communications Specialist</h3>
+                                <p class="text-slate-700 font-semibold mb-4">Leidos / Dept. of Justice</p>
+                                <p class="text-stone-600">
+                                    Led digital outreach initiatives by developing and executing strategic social media campaigns that significantly grew audience engagement. I managed a comprehensive content calendar, analyzed performance metrics to refine strategy, and collaborated with leadership to ensure all communications aligned with key organizational goals.
+                                </p>
+                            </div>
+                            <div class="mt-4">
+                                <button data-modal-target="socialMediaModal" class="open-modal-btn text-slate-700 hover:text-slate-800 font-semibold inline-block">
+                                    View Social Media Highlights &rarr;
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Work Item 3 (with Modal) -->
+                    <div class="card bg-white p-8 rounded-lg border border-stone-200">
+                        <div class="card-content flex flex-col">
+                            <div class="flex-grow">
+                                <h3 class="text-xl font-bold mb-2 text-black">Journalist</h3>
+                                <p class="text-slate-700 font-semibold mb-4">Tax Notes</p>
+                                <p class="text-stone-600">
+                                    Authored over 600 articles on complex tax policy, translating technical information into compelling content. Hosted and produced podcast episodes featured in Forbes.
+                                </p>
+                            </div>
+                            <div class="mt-4">
+                                <button data-modal-target="taxNotesModal" class="open-modal-btn text-slate-700 hover:text-slate-800 font-semibold inline-block">
+                                    View Article Samples &rarr;
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Work Item 4 (with Modal) -->
+                    <div class="card bg-white p-8 rounded-lg border border-stone-200">
+                         <div class="card-content flex flex-col">
+                            <div class="flex-grow">
+                                <h3 class="text-xl font-bold mb-2 text-black">Legal Editor</h3>
+                                <p class="text-slate-700 font-semibold mb-4">Bloomberg</p>
+                                <p class="text-stone-600">
+                                    Produced over 200 articles on Tax Court cases and administrative changes under tight deadlines. Co-hosted a podcast series analyzing significant court cases for the public.
+                                </p>
+                            </div>
+                            <div class="mt-4">
+                                <button data-modal-target="bloombergModal" class="open-modal-btn text-slate-700 hover:text-slate-800 font-semibold inline-block">
+                                    View Article Samples &rarr;
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Work Item 5 (with Modal) -->
+                    <div class="card bg-white p-8 rounded-lg border border-stone-200">
+                        <div class="card-content flex flex-col">
+                           <div class="flex-grow">
+                                <h3 class="text-xl font-bold mb-2 text-black">Reporter</h3>
+                                <p class="text-slate-700 font-semibold mb-4">PolitiFact</p>
+                                <p class="text-stone-600">
+                                    Researched and wrote fact-checks on statements from public officials, promoting accuracy and accountability in political discourse through in-depth, non-partisan reporting.
+                                </p>
+                            </div>
+                             <div class="mt-4">
+                                <button data-modal-target="politifactModal" class="open-modal-btn text-slate-700 hover:text-slate-800 font-semibold inline-block">
+                                    View Article Samples &rarr;
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Podcasts -->
+        <section id="podcasts" class="py-20 md:py-32" style="background-color: #F0EBE3;">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-black">Featured Podcasts</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">
+                        A selection of podcasts I've been featured in, hosted, or scripted, discussing complex tax topics and policy.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Podcast 1 -->
+                    <a href="https://www.taxnotes.com/lr/resolve/tax-notes-live/feminism-and-the-tax-code/79g2n?highlight=carolina%20vargas" target="_blank" class="card block bg-white p-8 rounded-lg border border-stone-200 text-center">
+                        <img src="https://www.taxnotes.com/sites/default/files/tax-notes-logo.svg" alt="Tax Notes Logo" class="h-10 mx-auto mb-4">
+                        <h3 class="text-xl font-bold mb-3 text-black">Feminism and The Tax Code</h3>
+                        <p class="text-stone-600 mb-4 flex-grow">A Tax Notes Live discussion on the intersection of feminist theory and tax policy.</p>
+                        <span class="text-slate-700 hover:text-slate-800 font-semibold mt-auto">Listen Now &rarr;</span>
+                    </a>
+                    <!-- Podcast 2 -->
+                    <a href="https://podcasts.apple.com/nz/podcast/alteras-tax-saga-irs-administrative-procedure-and/id1247619396?i=1000419698331" target="_blank" class="card block bg-white p-8 rounded-lg border border-stone-200 text-center">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXBvZGNhc3QiPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjE0IiB4PSI4IiB5PSI1IiByeD0iNCIvPjxwYXRoIGQ9Ik0xMiAxOHYyIi8+PHBhdGggZD0iTTggMjJoOG0tOS05YTEgMSAwIDAgMCAwIDJ2MmExIDEgMCAwIDAgMiAwbTAtNGEzIDMgMCAwIDAgMC02djZhMyAzIDAgMCAwLTYgMG0xNC0zYTEgMSAwIDAgMSAwIDJ2MmExIDEgMCAwIDEtMiAwbTAtNGEzIDMgMCAwIDEgMCA2VjhhMyAzIDAgMCAxIDYgMCIvPjwvc3ZnPg==" alt="Apple Podcasts Logo" style="filter: invert(33%) sepia(80%) saturate(2937%) hue-rotate(225deg) brightness(94%) contrast(91%);" class="h-12 mx-auto mb-4">
+                        <h3 class="text-xl font-bold mb-3 text-black">Altera's Tax Saga</h3>
+                        <p class="text-stone-600 mb-4 flex-grow">An analysis of the Altera tax case and its implications for IRS administrative procedure.</p>
+                        <span class="text-slate-700 hover:text-slate-800 font-semibold mt-auto">Listen Now &rarr;</span>
+                    </a>
+                    <!-- Podcast 3 -->
+                    <a href="https://www.forbes.com/sites/taxnotes/2020/07/20/interview-digital-advertising-taxes-and-the-states/" target="_blank" class="card block bg-white p-8 rounded-lg border border-stone-200 text-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Forbes_logo.svg/2560px-Forbes_logo.svg.png" alt="Forbes Logo" class="h-6 mx-auto mb-4">
+                        <h3 class="text-xl font-bold mb-3 text-black">Digital Advertising Taxes</h3>
+                        <p class="text-stone-600 mb-4 flex-grow">A Forbes feature on the complexities of digital advertising taxes at the state level.</p>
+                        <span class="text-slate-700 hover:text-slate-800 font-semibold mt-auto">Listen Now &rarr;</span>
+                    </a>
+                     <!-- Podcast 4 -->
+                    <a href="https://www.forbes.com/sites/taxnotes/2021/12/28/year-end-collection-tax-oddities-of-2020/" target="_blank" class="card block bg-white p-8 rounded-lg border border-stone-200 text-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Forbes_logo.svg/2560px-Forbes_logo.svg.png" alt="Forbes Logo" class="h-6 mx-auto mb-4">
+                        <h3 class="text-xl font-bold mb-3 text-black">Tax Oddities of 2020</h3>
+                        <p class="text-stone-600 mb-4 flex-grow">A year-end collection exploring the most unusual tax stories and developments of 2020.</p>
+                        <span class="text-slate-700 hover:text-slate-800 font-semibold mt-auto">Listen Now &rarr;</span>
+                    </a>
+                     <!-- Podcast 5 -->
+                    <a href="https://www.forbes.com/sites/taxnotes/2021/09/28/feminism-and-the-tax-code/" target="_blank" class="card block bg-white p-8 rounded-lg border border-stone-200 text-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Forbes_logo.svg/2560px-Forbes_logo.svg.png" alt="Forbes Logo" class="h-6 mx-auto mb-4">
+                        <h3 class="text-xl font-bold mb-3 text-black">Feminism and the Tax Code (Forbes)</h3>
+                        <p class="text-stone-600 mb-4 flex-grow">A deep dive into how the U.S. tax code impacts women, featured on Forbes.</p>
+                        <span class="text-slate-700 hover:text-slate-800 font-semibold mt-auto">Listen Now &rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Contact -->
+        <section id="contact" class="py-20 md:py-32" style="background-color: #FDFBF8;">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title text-black">Let's Connect</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious team.
+                </p>
+                <div class="mt-8">
+                    <a href="mailto:carolinavargaswork2@gmail.com"
+                       class="inline-block bg-slate-700 text-white text-xl font-medium px-8 py-4 rounded-lg hover:bg-slate-800 transition-colors shadow-lg">
+                       carolinavargaswork2@gmail.com
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-stone-300">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 Carolina Vargas. All Rights Reserved.</p>
+            <div class="mt-4">
+                <a href="https://www.linkedin.com/in/carolina-j-vargas/" target="_blank" class="text-stone-400 hover:text-white transition-colors">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Herndon Herald Articles -->
+    <div id="herndonHeraldModal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
+        <div class="modal-content bg-white rounded-lg shadow-xl w-11/12 md:max-w-2xl mx-auto p-8 transform -translate-y-10">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold">The Herndon Herald: Article Samples</h3>
+                <button class="close-modal-btn text-gray-500 hover:text-gray-800 text-3xl">&times;</button>
+            </div>
+            <ul class="space-y-3 max-h-96 overflow-y-auto">
+                <li><a href="https://theherndonherald.substack.com/p/the-herndon-herald-june-25-2025?r=5wg4b9" target="_blank" class="text-slate-700 hover:underline">The Herndon Herald: June 25, 2025</a></li>
+                <li><a href="https://theherndonherald.substack.com/p/the-herndon-herald-july-2-2025?r=5wg4b9" target="_blank" class="text-slate-700 hover:underline">The Herndon Herald: July 2, 2025</a></li>
+                <li><a href="https://theherndonherald.substack.com/p/the-herndon-herald-july-9-2025?r=5wg4b9" target="_blank" class="text-slate-700 hover:underline">The Herndon Herald: July 9, 2025</a></li>
+                <li><a href="https://theherndonherald.substack.com/p/the-herndon-herald-july-16-2025?r=5wg4b9" target="_blank" class="text-slate-700 hover:underline">The Herndon Herald: July 16, 2025</a></li>
+                <li><a href="https://theherndonherald.substack.com/p/the-herndon-herald-july-23-2025?r=5wg4b9" target="_blank" class="text-slate-700 hover:underline">The Herndon Herald: July 23, 2025</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal for Tax Notes Articles -->
+    <div id="taxNotesModal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
+        <div class="modal-content bg-white rounded-lg shadow-xl w-11/12 md:max-w-2xl mx-auto p-8 transform -translate-y-10">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold">Tax Notes: Article Samples</h3>
+                <button class="close-modal-btn text-gray-500 hover:text-gray-800 text-3xl">&times;</button>
+            </div>
+            <ul class="space-y-3 max-h-96 overflow-y-auto">
+                <li><a href="https://www.taxnotes.com/lr/resolve/tax-notes-today-state/new-york-bill-would-establish-green-air-travel-tax/7d5xr?highlight=carolina%20vargas" target="_blank" class="text-slate-700 hover:underline">New York Bill Would Establish Green Air Travel Tax</a></li>
+                <li><a href="https://www.taxnotes.com/lr/resolve/tax-notes-today-state/iowa-bill-would-cut-sales-and-use-tax-on-american-made-products/7d54v?highlight=carolina%20vargas" target="_blank" class="text-slate-700 hover:underline">Iowa Bill Would Cut Sales and Use Tax on American-Made Products</a></li>
+                <li><a href="https://www.taxnotes.com/lr/resolve/tax-notes-today-state/salt-cap-workaround-in-massachusetts-budget-not-yet-settled/76wn6?highlight=carolina%20vargas" target="_blank" class="text-slate-700 hover:underline">SALT Cap Workaround in Massachusetts Budget Not Yet Settled</a></li>
+                <li><a href="https://www.taxnotes.com/lr/resolve/tax-notes-today-state/new-york-bill-would-provide-moratorium-on-tax-lien-sales-foreclosures/7d4fz?highlight=carolina%20vargas" target="_blank" class="text-slate-700 hover:underline">New York Bill Would Provide Moratorium on Tax Lien Sales, Foreclosures</a></li>
+                <li><a href="https://www.taxnotes.com/lr/resolve/tax-notes-today-state/new-york-governor-calls-for-additional-tax-relief-amid-coronavirus-surge/7crp3?highlight=carolina%20vargas" target="_blank" class="text-slate-700 hover:underline">New York Governor Calls for Additional Tax Relief Amid Coronavirus Surge</a></li>
+                <li><a href="https://www.taxnotes.com/lr/resolve/tax-notes-today-state/michigan-extends-personal-property-tax-situsing/7cqzn?highlight=carolina%20vargas" target="_blank" class="text-slate-700 hover:underline">Michigan Extends Personal Property Tax Situsing</a></li>
+                <li><a href="https://www.taxnotes.com/lr/resolve/tax-notes-today-state/nyc-commission-issues-final-property-tax-reform-recommendations/7cr8h?highlight=carolina%20vargas" target="_blank" class="text-slate-700 hover:underline">NYC Commission Issues Final Property Tax Reform Recommendations</a></li>
+                <li><a href="https://www.taxnotes.com/lr/resolve/tax-notes-today-state/new-york-governor-approves-bill-extending-star-exemptions/7cpkk?highlight=carolina%20vargas" target="_blank" class="text-slate-700 hover:underline">New York Governor Approves Bill Extending STAR Exemptions</a></li>
+                <li><a href="https://www.taxnotes.com/lr/resolve/tax-notes-today-state/michigan-allows-disabled-veterans-to-deduct-forgiven-student-loans/7cp27?highlight=carolina%20vargas" target="_blank" class="text-slate-700 hover:underline">Michigan Allows Disabled Veterans to Deduct Forgiven Student Loans</a></li>
+                <li><a href="https://www.taxnotes.com/featured-news/michigan-bills-would-establish-job-creation-incentive-program/2021/10/22/7bd00" target="_blank" class="text-slate-700 hover:underline">Michigan Bills Would Establish Job Creation Incentive Program</a></li>
+                <li><a href="https://www.taxnotes.com/lr/resolve/tax-notes-today-state/new-york-bill-would-exempt-tips-and-overtime-wages/7dfyb?highlight=carolina%20vargas" target="_blank" class="text-slate-700 hover:underline">New York Bill Would Exempt Tips and Overtime Wages</a></li>
+                <li><a href="https://www.taxnotes.com/lr/resolve/tax-notes-today-state/colorado-bill-would-make-salt-cap-workaround-retroactive/7dflk?highlight=carolina%20vargas" target="_blank" class="text-slate-700 hover:underline">Colorado Bill Would Make SALT Cap Workaround Retroactive</a></li>
+                <li><a href="https://www.taxnotes.com/lr/resolve/tax-notes-today-state/georgia-governor-approves-flat-income-tax-bill/7dffr?highlight=carolina%20vargas" target="_blank" class="text-slate-700 hover:underline">Georgia Governor Approves Flat Income Tax Bill</a></li>
+                <li><a href="https://www.taxnotes.com/lr/resolve/tax-notes-today-state/kansas-governor-urges-legislators-to-reconsider-one-time-tax-rebate/7df3g?highlight=carolina%20vargas" target="_blank" class="text-slate-700 hover:underline">Kansas Governor Urges Legislators to Reconsider One-Time Tax Rebate</a></li>
+                <li><a href="https://www.taxnotes.com/lr/resolve/tax-notes-state/audit-new-york-forest-protection-program-needs-more-oversight/7ddv2?highlight=carolina%20vargas" target="_blank" class="text-slate-700 hover:underline">Audit: New York Forest Protection Program Needs More Oversight</a></li>
+                <li><a href="https://www.taxnotes.com/lr/resolve/tax-notes-today-state/cost-supports-iowas-proposed-nol-computation-fix-opposes-sales-tax-expansion/7ddhg?highlight=carolina%20vargas" target="_blank" class="text-slate-700 hover:underline">COST Supports Iowa's Proposed NOL Computation Fix, Opposes Sales Tax Expansion</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Modal for Bloomberg Articles -->
+    <div id="bloombergModal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
+        <div class="modal-content bg-white rounded-lg shadow-xl w-11/12 md:max-w-2xl mx-auto p-8 transform -translate-y-10">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold">Bloomberg: Article Samples</h3>
+                <button class="close-modal-btn text-gray-500 hover:text-gray-800 text-3xl">&times;</button>
+            </div>
+            <ul class="space-y-3 max-h-96 overflow-y-auto">
+                <li><a href="https://news.bloombergtax.com/transfer-pricing/intel-subsidiary-altera-cost-sharing-case-probably-wont-end-here" target="_blank" class="text-slate-700 hover:underline">Intel Subsidiary Altera Cost-Sharing Case Probably Won’t End Here</a></li>
+                <li><a href="https://news.bloombergtax.com/daily-tax-report/tax-court-action-a-look-at-rulings-in-second-quarter-2018" target="_blank" class="text-slate-700 hover:underline">Tax Court Action: A Look at Rulings in Second Quarter 2018</a></li>
+                <li><a href="https://news.bloomberglaw.com/daily-tax-report/tax-law-gets-rare-spotlight-in-ruth-bader-ginsburg-biopic" target="_blank" class="text-slate-700 hover:underline">Tax Law Gets Rare Spotlight in Ruth Bader Ginsburg Biopic</a></li>
+                <li><a href="https://news.bloomberglaw.com/daily-tax-report/tv-reality-star-the-situation-sentenced-for-tax-evasion-1" target="_blank" class="text-slate-700 hover:underline">TV Reality Star ‘The Situation’ Sentenced for Tax Evasion</a></li>
+                <li><a href="https://news.bloomberglaw.com/environment-and-energy/irs-micro-captive-court-victories-spur-settlement-speculation?context=article-related" target="_blank" class="text-slate-700 hover:underline">IRS Micro-Captive Court Victories Spur Settlement Speculation</a></li>
+                <li><a href="https://news.bloomberglaw.com/us-law-week/kaestner" target="_blank" class="text-slate-700 hover:underline">Supreme Court to Hear Major Trust Tax Case (Kaestner)</a></li>
+                <li><a href="https://news.bloomberglaw.com/daily-tax-report/santander-to-get-60-million-in-foreign-tax-credits-settlement?context=search&index=2" target="_blank" class="text-slate-700 hover:underline">Santander to Get $60 Million in Foreign Tax Credits Settlement</a></li>
+                <li><a href="https://news.bloomberglaw.com/daily-tax-report/tribes-alcohol-license-can-hinge-on-sales-tax-collection-court?context=search&index=0" target="_blank" class="text-slate-700 hover:underline">Tribe’s Alcohol License Can Hinge on Sales Tax Collection: Court</a></li>
+                <li><a href="https://news.bloomberglaw.com/daily-tax-report/divorcee-fights-3-2-million-in-tax-penalties-from-exs-estate?context=search&index=3" target="_blank" class="text-slate-700 hover:underline">Divorcee Fights $3.2 Million in Tax Penalties From Ex’s Estate</a></li>
+                <li><a href="https://news.bloomberglaw.com/daily-tax-report/health-business-owner-faces-5-6-million-tax-enforcement?context=search&index=5" target="_blank" class="text-slate-700 hover:underline">Health Business Owner Faces $5.6 Million Tax Enforcement</a></li>
+                <li><a href="https://news.bloomberglaw.com/daily-tax-report/koch-backed-group-takes-donor-disclosure-case-to-supreme-court?context=search&index=7" target="_blank" class="text-slate-700 hover:underline">Koch-Backed Group Takes Donor Disclosure Case to Supreme Court</a></li>
+                <li><a href="https://news.bloomberglaw.com/daily-tax-report/de-blasios-favorite-brooklyn-pizzeria-reopens-after-tax-spat?context=search&index=11" target="_blank" class="text-slate-700 hover:underline">De Blasio’s Favorite Brooklyn Pizzeria Reopens After Tax Spat</a></li>
+                <li><a href="https://news.bloomberglaw.com/daily-tax-report/apple-subsidiary-illegally-charged-illinois-tax-boutique-says?context=search&index=13" target="_blank" class="text-slate-700 hover:underline">Apple Subsidiary Illegally Charged Illinois Tax, Boutique Says</a></li>
+                <li><a href="https://news.bloomberglaw.com/daily-tax-report/irs-pursuing-5-6m-in-income-taxes-from-business-owner?context=search&index=16" target="_blank" class="text-slate-700 hover:underline">IRS Pursuing $5.6M in Income Taxes From Business Owner</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal for PolitiFact Articles -->
+    <div id="politifactModal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
+        <div class="modal-content bg-white rounded-lg shadow-xl w-11/12 md:max-w-2xl mx-auto p-8 transform -translate-y-10">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold">PolitiFact: Article Samples</h3>
+                <button class="close-modal-btn text-gray-500 hover:text-gray-800 text-3xl">&times;</button>
+            </div>
+            <ul class="space-y-3 max-h-96 overflow-y-auto">
+                <li><a href="https://www.politifact.com/factchecks/2017/dec/15/roy-blunt/sen-roy-blunt-mostly-right-about-health-care-progr/" target="_blank" class="text-slate-700 hover:underline">Sen. Roy Blunt mostly right about health care program funding</a></li>
+                <li><a href="https://www.politifact.com/factchecks/2017/oct/31/bernie-sanders/sanders-token-claim-economic-disparity-accurate-ca/" target="_blank" class="text-slate-700 hover:underline">Sanders' token claim on economic disparity accurate, lacks context</a></li>
+                <li><a href="https://www.politifact.com/factchecks/2017/sep/27/feministing/column-feministing-website-about-abortion-law-pant/" target="_blank" class="text-slate-700 hover:underline">Column on Feministing website about abortion law pants on fire</a></li>
+                <li><a href="https://www.politifact.com/factchecks/2017/sep/10/eric-greitens/greitens-claim-improving-business-climate-half-tru/" target="_blank" class="text-slate-700 hover:underline">Greitens' claim on improving business climate is half true</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal for Social Media Highlights -->
+    <div id="socialMediaModal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
+        <div class="modal-content bg-white rounded-lg shadow-xl w-11/12 md:max-w-4xl mx-auto p-8 transform -translate-y-10">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold">OJP Social Media Highlights</h3>
+                <button class="close-modal-btn text-gray-500 hover:text-gray-800 text-3xl">&times;</button>
+            </div>
+            <div class="space-y-8 max-h-[70vh] overflow-y-auto">
+                <!-- Twitter Section -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Twitter</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <img src="img/twitter-1.jpg" alt="Twitter Screenshot 1" class="rounded-lg shadow-md">
+                        <img src="img/twitter-2.jpg" alt="Twitter Screenshot 2" class="rounded-lg shadow-md">
+                    </div>
+                    <p class="mt-2 text-gray-600"><strong>Caption:</strong> Managed the OJP Twitter account, creating content that increased engagement by 25%.</p>
+                </div>
+                <!-- Facebook Section -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Facebook</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <img src="img/facebook-1.jpg" alt="Facebook Post Screenshot 1" class="rounded-lg shadow-md">
+                        <img src="img/facebook-2.jpg" alt="Facebook Post Screenshot 2" class="rounded-lg shadow-md">
+                        <img src="img/facebook-3.jpg" alt="Facebook Post Screenshot 3" class="rounded-lg shadow-md">
+                        <img src="img/facebook-4.jpg" alt="Facebook Post Screenshot 4" class="rounded-lg shadow-md">
+                    </div>
+                    <p class="mt-2 text-gray-600"><strong>Caption:</strong> Developed and executed Facebook campaigns for key initiatives, reaching over 1 million users.</p>
+                </div>
+                <!-- YouTube Section -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">YouTube</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="aspect-w-16 aspect-h-9">
+                           <iframe src="https://www.youtube.com/embed/sLXnX3h-XDU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-md w-full h-full"></iframe>
+                        </div>
+                         <div class="aspect-w-16 aspect-h-9">
+                           <iframe src="https://www.youtube.com/embed/8R4TfuKvGOQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-md w-full h-full"></iframe>
+                        </div>
+                         <div class="aspect-w-16 aspect-h-9">
+                           <iframe src="https://www.youtube.com/embed/-_M-VHmraug" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-md w-full h-full"></iframe>
+                        </div>
+                    </div>
+                    <p class="mt-2 text-gray-600"><strong>Caption:</strong> Wrote scripts and coordinated production for informational videos on YouTube for the Office of Justice Programs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Reusable Modal functionality
+        document.querySelectorAll('.open-modal-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const modalId = button.getAttribute('data-modal-target');
+                const modal = document.getElementById(modalId);
+                const modalContent = modal.querySelector('.modal-content');
+                
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modalContent.classList.remove('-translate-y-10');
+            });
+        });
+
+        document.querySelectorAll('.close-modal-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = button.closest('.modal');
+                const modalContent = modal.querySelector('.modal-content');
+                
+                modal.classList.add('opacity-0');
+                modalContent.classList.add('-translate-y-10');
+                setTimeout(() => {
+                    modal.classList.add('pointer-events-none');
+                }, 300);
+            });
+        });
+
+        // Close modal if clicking outside the content
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    const modalContent = modal.querySelector('.modal-content');
+                    modal.classList.add('opacity-0');
+                    modalContent.classList.add('-translate-y-10');
+                    setTimeout(() => {
+                        modal.classList.add('pointer-events-none');
+                    }, 300);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
